@@ -10,6 +10,10 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsOpen(false);
@@ -23,6 +27,36 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const navbarLinks = document.querySelector(".navbar-links");
+      const hamburger = document.querySelector(".hamburger");
+
+      if (
+        navbarLinks.classList.contains("active") &&
+        !navbarLinks.contains(event.target) &&
+        !hamburger.contains(event.target)
+      ) {
+        closeMenu();
+      }
+    };
+
+    const handleScroll = () => {
+      const navbarLinks = document.querySelector(".navbar-links");
+      if (navbarLinks.classList.contains("active")) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="relative">
@@ -73,27 +107,30 @@ const Nav = () => {
           </div>
           {/* item 3 */}
           <div className="group relative inline-flex cursor-pointer flex-col items-center justify-center gap-2.5">
-            <Link to="/sobre" className="justify-start text-center text-2xl leading-8 font-normal text-zinc-700">
+            <Link
+              to="/sobre"
+              className="justify-start text-center text-2xl leading-8 font-normal text-zinc-700"
+            >
               Sobre
             </Link>
             <span className="bg-purple700 absolute bottom-0 left-0 h-px w-0 transition-all duration-400 ease-out group-hover:w-full"></span>
           </div>
-            <a
-              href="https://www.instagram.com/fisioella_pelve/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform duration-300 ease-out hover:scale-110"
-            >
-              <img src={insta} alt="Instagram" />
-            </a>
-            <a
-              href="https://wa.me/5512996461927"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform duration-300 ease-out hover:scale-110"
-            >
-              <img src={whatsapp} alt="WhatsApp" />
-            </a>
+          <a
+            href="https://www.instagram.com/fisioella_pelve/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 ease-out hover:scale-110"
+          >
+            <img src={insta} alt="Instagram" />
+          </a>
+          <a
+            href="https://wa.me/5512996461927"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 ease-out hover:scale-110"
+          >
+            <img src={whatsapp} alt="WhatsApp" />
+          </a>
         </div>
       </nav>
       {isOpen && (
@@ -104,6 +141,7 @@ const Nav = () => {
           <div className="group relative inline-flex cursor-pointer flex-col items-center justify-center gap-2.5">
             <Link
               to="/"
+              onClick={closeMenu}
               className="justify-start text-center text-xl leading-8 font-normal text-zinc-700"
             >
               Inicio
@@ -113,6 +151,7 @@ const Nav = () => {
           <div className="group relative inline-flex cursor-pointer flex-col items-center justify-center gap-2.5">
             <Link
               to="/serviços"
+              onClick={closeMenu}
               className="justify-start text-center text-xl leading-8 font-normal text-zinc-700"
             >
               Serviços
@@ -122,6 +161,7 @@ const Nav = () => {
           <div className="group relative inline-flex cursor-pointer flex-col items-center justify-center gap-2.5">
             <Link
               to="/sobre"
+              onClick={closeMenu}
               className="justify-start text-center text-xl leading-8 font-normal text-zinc-700"
             >
               Sobre
@@ -130,8 +170,24 @@ const Nav = () => {
           </div>
 
           <div className="flex gap-4">
-            <img src={insta} alt="Instagram" className="w-6" />
-            <img src={whatsapp} alt="WhatsApp" className="w-6" />
+            <a
+              href="https://www.instagram.com/fisioella_pelve/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              className="transition-transform duration-300 ease-out hover:scale-110"
+            >
+              <img src={insta} alt="Instagram" className="w-6" />
+            </a>
+            <a
+              href="https://wa.me/5512996461927"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              className="transition-transform duration-300 ease-out hover:scale-110"
+            >
+              <img src={whatsapp} alt="WhatsApp" className="w-6" />
+            </a>
           </div>
         </div>
       )}

@@ -111,7 +111,7 @@ const Home = () => {
             <img src={star} alt="Estrela" />
             <div>
               <h2 className="font-quick text-xl font-semibold">
-                Dispareunia (dor na relação)
+                Dor na relação (Vaginismo, Vulvodínia, Dispareunia, entre outras)
               </h2>
               <p className="font-quick">Bem-estar íntimo e qualidade de vida</p>
             </div>
