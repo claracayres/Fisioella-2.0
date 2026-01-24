@@ -84,7 +84,7 @@ const Footer = () => {
       <div className="col-span-1 border-t border-gray-300 py-2 text-center md:col-span-4">
         <p className="font-quick text-xs">
           &copy;2026 Fisioella - Dra. Neila Cayres. Todos os direitos
-          reservados.
+          reservados
         </p>
       </div>
     </main>
