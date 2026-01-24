@@ -20,7 +20,7 @@ const Serviços = () => {
       />
 
       <div className="flex w-full max-w-4xl flex-col items-center gap-4">
-        <h1 className="font-kudry border-purple700 w-fit border-b-2 text-2xl md:text-3xl">
+        <h1 className="font-kudry border-purple700 w-fit border-b-2 text-3xl">
           Serviços
         </h1>
         <p className="font-quick text-center">
