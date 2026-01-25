@@ -53,7 +53,7 @@ const FisioPelvica = () => {
           </h2>
           <ul className="font-quick mt-4 flex flex-1 flex-col justify-center text-center">
             <li>Eletroterapia</li>
-            <li>Lasertterapia</li>
+            <li>Laserterapia</li>
             <li>Exercícios específicos para musculatura do assoalho pélvico</li>
             <li>Terapia comportamental</li>
             <li>Entre Outros...</li>
