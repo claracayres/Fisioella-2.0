@@ -6,6 +6,7 @@ import {
   trackWhatsAppClick,
 } from "../utils/facebookPixel";
 import SEO from "../components/SEO";
+import { Link } from "react-router-dom";
 
 const Radio = () => {
   useEffect(() => {
@@ -20,8 +21,8 @@ const Radio = () => {
       />
 
       <div className="relative flex w-full items-center justify-center">
-        <a
-          href="/serviços"
+        <Link
+          to="/serviços"
           className="font-quick group absolute left-0 flex cursor-pointer items-center justify-center font-bold md:left-8"
         >
           <FontAwesomeIcon
@@ -29,7 +30,7 @@ const Radio = () => {
             icon={faChevronLeft}
           />
           Voltar{" "}
-        </a>
+        </Link>
         <h1 className="font-kudry border-purple700 flex w-fit justify-self-center border-b text-2xl md:text-3xl">
           Radiofrequência Íntima
         </h1>

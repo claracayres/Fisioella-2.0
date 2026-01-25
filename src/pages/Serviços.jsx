@@ -6,6 +6,7 @@ import radioIcon from "../assets/icon-radio.png";
 import { useEffect } from "react";
 import SEO from "../components/SEO";
 import { trackPageView, trackTreatmentClick } from "../utils/facebookPixel";
+import { Link } from "react-router-dom";
 
 const Serviços = () => {
   useEffect(() => {
@@ -30,8 +31,8 @@ const Serviços = () => {
         </p>
       </div>
       <div className="mt-8 flex flex-col md:flex-row md:flex-wrap md:justify-center lg:gap-8">
-        <a
-          href="/fisiopelvica"
+        <Link
+          to="/fisiopelvica"
           className="border-purple300 mt-8 flex w-full flex-col justify-center gap-4 rounded-lg border-2 p-6 text-center shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl md:w-96"
           onClick={() => trackTreatmentClick("Fisioterapia Pélvica")}
         >
@@ -44,8 +45,8 @@ const Serviços = () => {
           <p className="font-quick text-center">
             Tratamento para fortalecer e reequilibrar a musculatura pélvica.
           </p>
-          <a
-            href="/fisiopelvica"
+          <Link
+            to="/fisiopelvica"
             className="font-quick group flex cursor-pointer items-center justify-center gap-2 font-bold"
           >
             Saiba mais{" "}
@@ -53,10 +54,10 @@ const Serviços = () => {
               className="transition-transform duration-300 group-hover:translate-x-2"
               icon={faChevronRight}
             />
-          </a>
-        </a>
-        <a
-          href="/radiofrequencia"
+          </Link>
+        </Link>
+        <Link
+          to="/radiofrequencia"
           className="border-purple300 mt-8 flex max-w-3xl flex-col justify-center gap-4 rounded-lg border-2 p-6 text-center shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl md:w-96"
           onClick={() => trackTreatmentClick("Radiofrequência Íntima")}
         >
@@ -69,8 +70,8 @@ const Serviços = () => {
           <p className="font-quick text-center">
             Rejuvenescimento e melhora da saúde íntima.
           </p>
-          <a
-            href="/radiofrequencia"
+          <Link
+            to="/radiofrequencia"
             className="font-quick group flex cursor-pointer items-center justify-center gap-2 font-bold"
           >
             Saiba mais{" "}
@@ -78,10 +79,10 @@ const Serviços = () => {
               className="transition-transform duration-300 group-hover:translate-x-2"
               icon={faChevronRight}
             />
-          </a>
-        </a>
-        <a
-          href="/drenagemlinfatica"
+          </Link>
+        </Link>
+        <Link
+          to="/drenagemlinfatica"
           className="border-purple300 mt-8 flex max-w-3xl flex-col justify-center gap-4 rounded-lg border-2 p-6 text-center shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl md:w-96"
           onClick={() => trackTreatmentClick("Drenagem Linfática")}
         >
@@ -95,8 +96,8 @@ const Serviços = () => {
             Redução de inchaço e melhora da circulação sanguínea com massagem
             terapêutica.
           </p>
-          <a
-            href="/drenagemlinfatica"
+          <Link
+            to="/drenagemlinfatica"
             className="font-quick group flex cursor-pointer items-center justify-center gap-2 font-bold"
           >
             Saiba mais{" "}
@@ -104,8 +105,8 @@ const Serviços = () => {
               className="transition-transform duration-300 group-hover:translate-x-2"
               icon={faChevronRight}
             />
-          </a>
-        </a>
+          </Link>
+        </Link>
       </div>
     </main>
   );
