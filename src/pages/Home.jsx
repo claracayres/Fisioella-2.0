@@ -42,7 +42,7 @@ const Home = () => {
         <h1 className="font-play text-2xl font-medium md:text-3xl">
           Você está enfrentando algum destes problemas?
         </h1>
-        <div className="mx-auto mt-8 grid w-fit grid-flow-row grid-cols-1 gap-1 md:grid-cols-2">
+        <div className="mx-auto mt-8 grid w-full max-w-4xl grid-flow-row grid-cols-1 justify-center gap-1 md:grid-cols-2">
           <div className="flex items-center justify-start gap-4 p-4 text-start">
             <img src={star} alt="Estrela" />
             <div>
@@ -111,7 +111,8 @@ const Home = () => {
             <img src={star} alt="Estrela" />
             <div>
               <h2 className="font-quick text-xl font-semibold">
-                Dor na relação (Vaginismo, Vulvodínia, Dispareunia, entre outras)
+                Dor na relação (Vaginismo, Vulvodínia, Dispareunia, entre
+                outras)
               </h2>
               <p className="font-quick">Bem-estar íntimo e qualidade de vida</p>
             </div>
