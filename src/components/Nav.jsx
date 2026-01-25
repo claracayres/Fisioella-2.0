@@ -63,7 +63,9 @@ const Nav = () => {
       <nav className="flex w-full content-center items-center justify-between gap-10 overflow-hidden bg-white/0 px-6 py-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] md:gap-2 md:px-12">
         <div className="flex items-baseline gap-2 hover:cursor-pointer md:gap-4">
           <h1 className="font-quick justify-start text-center text-2xl leading-8 font-normal tracking-wide uppercase lg:text-3xl">
+            <Link to="/">
             Fisioella
+            </Link>
           </h1>
           <div className="bg-purple700 hidden w-px self-stretch sm:block" />
           <h2 className="font-kudry hidden text-center text-2xl leading-8 font-bold sm:block lg:text-3xl">
