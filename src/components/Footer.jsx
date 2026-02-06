@@ -6,8 +6,19 @@ import phone from "../assets/phone.svg";
 import email from "../assets/mail.svg";
 import map from "../assets/map.svg";
 import clock from "../assets/clock.svg";
+import { trackWhatsAppClick } from "../utils/facebookPixel";
 
 const Footer = () => {
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick();
+    if (window.gtag) {
+      window.gtag("event", "whatsapp_click", {
+        event_category: "engagement",
+        event_label: "WhatsApp",
+      });
+    }
+  };
+
   return (
     <main className="grid grid-cols-1 gap-2 px-6 pt-12 shadow-[0px_-5px_10px_0px_rgba(230,224,229,1.00)] md:grid-cols-4 md:gap-8 md:px-12">
       <div className="flex h-full items-center justify-start gap-4">
@@ -28,6 +39,7 @@ const Footer = () => {
               href="https://wa.me/5512996461927"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="transition-transform duration-300 ease-out hover:scale-110"
             >
               <img src={whatsapp} alt="WhatsApp" />
@@ -83,8 +95,7 @@ const Footer = () => {
 
       <div className="col-span-1 border-t border-gray-300 py-2 text-center md:col-span-4">
         <p className="font-quick text-xs">
-          &copy;2026 Fisioella - Dra. Neila Cayres. Todos os direitos
-          reservados
+          &copy;2026 Fisioella - Dra. Neila Cayres. Todos os direitos reservados
         </p>
       </div>
     </main>

@@ -5,6 +5,7 @@ import close from "../assets/close.svg";
 import insta from "../assets/instagram.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import { Link } from "react-router-dom";
+import { trackWhatsAppClick } from "../utils/facebookPixel";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +13,16 @@ const Nav = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick();
+    if (window.gtag) {
+      window.gtag("event", "whatsapp_click", {
+        event_category: "engagement",
+        event_label: "WhatsApp",
+      });
+    }
   };
 
   useEffect(() => {
@@ -63,9 +74,7 @@ const Nav = () => {
       <nav className="flex w-full content-center items-center justify-between gap-10 overflow-hidden bg-white/0 px-6 py-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] md:gap-2 md:px-12">
         <div className="flex items-baseline gap-2 hover:cursor-pointer md:gap-4">
           <h1 className="font-quick justify-start text-center text-2xl leading-8 font-normal tracking-wide uppercase lg:text-3xl">
-            <Link to="/">
-            Fisioella
-            </Link>
+            <Link to="/">Fisioella</Link>
           </h1>
           <div className="bg-purple700 hidden w-px self-stretch sm:block" />
           <h2 className="font-kudry hidden text-center text-2xl leading-8 font-bold sm:block lg:text-3xl">
@@ -129,6 +138,7 @@ const Nav = () => {
             href="https://wa.me/5512996461927"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
             className="transition-transform duration-300 ease-out hover:scale-110"
           >
             <img src={whatsapp} alt="WhatsApp" />
@@ -185,7 +195,10 @@ const Nav = () => {
               href="https://wa.me/5512996461927"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={closeMenu}
+              onClick={() => {
+                closeMenu();
+                handleWhatsAppClick();
+              }}
               className="transition-transform duration-300 ease-out hover:scale-110"
             >
               <img src={whatsapp} alt="WhatsApp" className="w-6" />
