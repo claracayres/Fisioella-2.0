@@ -11,9 +11,10 @@ const Sobre = () => {
   return (
     <main className="flex min-h-screen flex-col items-center overflow-x-hidden p-4">
       <SEO
-        title="Dra Neila Cayres - Fisioella"
-        description="Conheça a Dra. Neila Cayres, especialista em fisioterapia pélvica."
-        canonical="https://www.fisioella.com/sobre"
+        title="Dra. Neila Cayres - Especialista em Fisioterapia Pélvica | Fisioella"
+        description="Conheça a Dra. Neila Cayres, especialista em fisioterapia pélvica e saúde íntima da mulher. Atendimento humanizado e individualizado em São José dos Campos."
+        canonical="/sobre"
+        keywords="Dra Neila Cayres, fisioterapeuta pélvica, especialista saúde da mulher, fisioterapeuta São José dos Campos"
       />
       <div className="w-full max-w-4xl">
         <div className="flex flex-col items-center gap-4">

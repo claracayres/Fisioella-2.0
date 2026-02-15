@@ -1,0 +1,8 @@
+# robots.txt para Fisioella
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+
+# Sitemap
+Sitemap: https://www.fisioella.com/sitemap.xml

@@ -1,10 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
-import {
-  trackTreatmentView,
-  trackWhatsAppClick,
-} from "../utils/facebookPixel";
+import { trackTreatmentView, trackWhatsAppClick } from "../utils/facebookPixel";
 import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 
@@ -15,9 +12,10 @@ const Radio = () => {
   return (
     <main className="flex min-h-screen flex-col gap-8 p-4">
       <SEO
-        title="Radiofrequência Íntima - Fisioella"
-        description="Conheça os tratamentos oferecidos pela Fisioella."
-        canonical="https://www.fisioella.com/radiofrequencia"
+        title="Radiofrequência Íntima - Rejuvenescimento e Saúde | Fisioella"
+        description="Radiofrequência íntima para rejuvenescimento, melhora da flacidez e fortalecimento da região íntima. Tratamento não invasivo com Dra. Neila Cayres."
+        canonical="/radiofrequencia"
+        keywords="radiofrequência íntima, rejuvenescimento íntimo, flacidez vaginal, saúde íntima, estética íntima"
       />
 
       <div className="relative flex w-full items-center justify-center">

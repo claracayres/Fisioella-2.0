@@ -15,9 +15,10 @@ const Serviços = () => {
   return (
     <main className="flex min-h-screen flex-col items-center p-4">
       <SEO
-        title="Serviços - Fisioella"
-        description="Conheça os tratamentos oferecidos pela Fisioella."
-        canonical="https://www.fisioella.com/Serviços"
+        title="Serviços - Fisioterapia Pélvica e Saúde da Mulher | Fisioella"
+        description="Conheça os tratamentos oferecidos pela Fisioella: Fisioterapia Pélvica, Drenagem Linfática e Radiofrequência Íntima. Atendimento individualizado com Dra. Neila Cayres."
+        canonical="/servicos"
+        keywords="serviços fisioterapia pélvica, tratamentos saúde da mulher, fisioterapia especializada"
       />
 
       <div className="flex w-full max-w-4xl flex-col items-center gap-4">

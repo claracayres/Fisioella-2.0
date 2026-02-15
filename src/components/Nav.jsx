@@ -30,44 +30,29 @@ const Nav = () => {
       setIsOpen(false);
     };
 
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        isOpen
+      ) {
+        const menuButton = event.target.closest('button[aria-label="Menu"]');
+        if (!menuButton) {
+          closeMenu();
+        }
+      }
+    };
+
     if (isOpen) {
       window.addEventListener("scroll", handleScroll);
+      document.addEventListener("click", handleClickOutside);
     }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [isOpen]);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const navbarLinks = document.querySelector(".navbar-links");
-      const hamburger = document.querySelector(".hamburger");
-
-      if (
-        navbarLinks.classList.contains("active") &&
-        !navbarLinks.contains(event.target) &&
-        !hamburger.contains(event.target)
-      ) {
-        closeMenu();
-      }
-    };
-
-    const handleScroll = () => {
-      const navbarLinks = document.querySelector(".navbar-links");
-      if (navbarLinks.classList.contains("active")) {
-        closeMenu();
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <header className="relative">

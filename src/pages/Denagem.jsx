@@ -1,10 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
-import {
-  trackTreatmentView,
-  trackWhatsAppClick,
-} from "../utils/facebookPixel";
+import { trackTreatmentView, trackWhatsAppClick } from "../utils/facebookPixel";
 import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 
@@ -15,9 +12,10 @@ const Drenagem = () => {
   return (
     <main className="flex min-h-screen flex-col gap-8 p-4">
       <SEO
-        title="Drenagem Linfática - Fisioella"
-        description="Conheça os tratamentos oferecidos pela Fisioella."
-        canonical="https://www.fisioella.com/Drenagem"
+        title="Drenagem Linfática - Tratamento Especializado | Fisioella"
+        description="Drenagem linfática para redução de inchaços, pós-operatório e bem-estar. Técnica especializada para melhorar a circulação e eliminar toxinas com Dra. Neila Cayres."
+        canonical="/drenagem"
+        keywords="drenagem linfática, massagem drenagem, pós-operatório, redução de inchaço, fisioterapia estética"
       />
 
       <div className="relative flex w-full items-center justify-center">
