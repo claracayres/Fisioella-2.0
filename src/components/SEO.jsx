@@ -12,6 +12,19 @@ const SEO = ({
   const siteUrl = "https://www.fisioella.com";
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
+  // Função auxiliar para criar/atualizar meta tags
+  const updateMetaTag = (attribute, attributeValue, content) => {
+    if (!content) return;
+
+    let meta = document.querySelector(`meta[${attribute}="${attributeValue}"]`);
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute(attribute, attributeValue);
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
+  };
+
   useEffect(() => {
     // Título
     if (title) {
@@ -70,17 +83,6 @@ const SEO = ({
     updateMetaTag("name", "twitter:card", "summary_large_image");
     updateMetaTag("name", "twitter:image", ogImage);
   }, [title, description, canonical, keywords, ogImage, ogType, fullCanonical]);
-
-  // Função auxiliar para criar/atualizar meta tags
-  const updateMetaTag = (attribute, attributeValue, content) => {
-    let meta = document.querySelector(`meta[${attribute}="${attributeValue}"]`);
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.setAttribute(attribute, attributeValue);
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  };
 
   return null;
 };
