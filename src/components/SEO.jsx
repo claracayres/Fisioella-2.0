@@ -6,10 +6,10 @@ const SEO = ({
   description,
   canonical,
   keywords,
-  ogImage = "https://www.fisioella.com/og-image.jpg",
+  ogImage = "https://www.fisioella.com.br/og-image.jpg",
   ogType = "website",
 }) => {
-  const siteUrl = "https://www.fisioella.com";
+  const siteUrl = "https://www.fisioella.com.br";
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
   // Função auxiliar para criar/atualizar meta tags

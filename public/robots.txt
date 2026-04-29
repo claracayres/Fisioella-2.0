@@ -5,4 +5,4 @@ Disallow: /admin
 Disallow: /api
 
 # Sitemap
-Sitemap: https://www.fisioella.com/sitemap.xml
+Sitemap: https://www.fisioella.com.br/sitemap.xml
