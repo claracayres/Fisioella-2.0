@@ -20,7 +20,7 @@ const Radio = () => {
 
       <div className="relative flex w-full items-center justify-center">
         <Link
-          to="/serviços"
+          to="/servicos"
           className="font-quick group absolute left-0 flex cursor-pointer items-center justify-center font-bold md:left-8"
         >
           <FontAwesomeIcon

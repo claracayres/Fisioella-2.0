@@ -8,7 +8,7 @@ import SEO from "../components/SEO";
 import { trackPageView, trackTreatmentClick } from "../utils/facebookPixel";
 import { Link } from "react-router-dom";
 
-const Serviços = () => {
+const Servicos = () => {
   useEffect(() => {
     trackPageView("Página de Serviços");
   }, []);
@@ -113,4 +113,4 @@ const Serviços = () => {
   );
 };
 
-export default Serviços;
+export default Servicos;

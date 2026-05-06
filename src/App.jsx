@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
-import Serviços from "./pages/Serviços.jsx";
+import Serviços from "./pages/Servicos.jsx";
 import FisioPelvica from "./pages/FisioPelvica.jsx";
 import Radio from "./pages/Radio.jsx";
 import Drenagem from "./pages/Denagem.jsx";

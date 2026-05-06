@@ -94,7 +94,7 @@ const Nav = () => {
           {/* item 2 */}
           <div className="group relative inline-flex cursor-pointer flex-col items-center justify-center gap-2.5">
             <Link
-              to="/serviços"
+              to="/servicos"
               className="justify-start text-center text-2xl leading-8 font-normal text-zinc-700"
             >
               Serviços
@@ -147,7 +147,7 @@ const Nav = () => {
           </div>
           <div className="group relative inline-flex cursor-pointer flex-col items-center justify-center gap-2.5">
             <Link
-              to="/serviços"
+              to="/servicos"
               onClick={closeMenu}
               className="justify-start text-center text-xl leading-8 font-normal text-zinc-700"
             >
