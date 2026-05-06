@@ -1,8 +1,25 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  "redirects": [
+    {
+      "source": "/contato",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tratamentos",
+      "destination": "/servicos",
+      "permanent": true
+    },
+    {
+      "source": "/sobre-mim",
+      "destination": "/sobre",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
